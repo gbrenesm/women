@@ -6,10 +6,10 @@ const cookieParser = require('cookie-parser');
 const logger       = require('morgan');
 const bodyParser   = require('body-parser');
 
+require('./config/mongoose')
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-
-require('./config/mongoose')
 
 const app = express();
 
