@@ -17,6 +17,9 @@ const dataSchema = new Schema(
     what: String,
     why: String,
     note: String
+  },
+  {
+    versionKey: false
   }
 )
 

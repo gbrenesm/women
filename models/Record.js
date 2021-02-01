@@ -16,6 +16,9 @@ const recordSchema = new Schema(
     translation: String,
     file: String,
     url: String
+  },
+  {
+    versionKey: false
   }
 )
 

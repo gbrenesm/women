@@ -9,6 +9,9 @@ const womanSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: 'Data'
     }
+  },
+  {
+    versionKey: false
   }
 )
 
