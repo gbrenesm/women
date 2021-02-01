@@ -8,7 +8,7 @@ exports.addWoman = async (req, res) => {
     age,
     note
   })
-  res.status(201).json({ woman })
+  res.status(201).json(woman)
 }
 
 // R
@@ -19,7 +19,7 @@ exports.seeAllWomen = async (req, res) => {
 
 exports.seeWomanDetails = async (req, res) => {
   const woman = await Woman.findById(req.params.womanId)
-  res.status(200).json({ woman })
+  res.status(200).json(woman)
 }
 
 // U

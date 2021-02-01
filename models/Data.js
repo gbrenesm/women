@@ -11,7 +11,7 @@ const dataSchema = new Schema(
       ref: 'Record',
       required: true
     }],
-    eventsDay: String,
+    eventsDay: Date,
     place: String,
     who: String,
     what: String,

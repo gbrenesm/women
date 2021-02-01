@@ -8,7 +8,6 @@ const bodyParser   = require('body-parser');
 
 require('./config/mongoose')
 
-const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
 const app = express();
@@ -20,7 +19,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+const womanRouter = require('./routes/woman');
+const dataRouter  = require('./routes/data');
+
+app.use('/api/woman', womanRouter);
+app.use('/api/data', dataRouter);
 app.use('/users', usersRouter);
 
 module.exports = app;

@@ -14,7 +14,7 @@ exports.addData = async (req, res) => {
     note
   })
   await Woman.findByIdAndUpdate(req.params.womanId, { data: data._id })
-  res.status(201).json({ data })
+  res.status(201).json(data)
 }
 
 // R
@@ -27,7 +27,7 @@ exports.seeDataDetail = async (req, res) => {
   const data = await Data.findById(req.params.dataId)
     .populate('Woman')
     .populate('Record')
-  res.status(200).json({ data })
+  res.status(200).json(data)
 }
 
 // U
