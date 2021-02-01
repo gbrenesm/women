@@ -18,6 +18,6 @@ router.get('/:womanId', seeWomanDetails)
 router.put('/update/:womanId', updateWoman)
 
 // D
-router.delete('/delete/:womanId', deleteWoman)
+router.delete('/:womanId', deleteWoman)
 
 module.exports = router;

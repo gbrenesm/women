@@ -3,18 +3,19 @@ const Data = require('../models/Data')
 
 // C
 exports.addRecord = async (req, res) => {
-  const { name, newspaper, publicationDate, publicationPlace, translation, file, url } = req.body
+  const { name, newspaper, publicationDate, page, publicationPlace, translation, file, url } = req.body
   const record = await Record.create({
     name,
     newspaper,
     publicationDate,
+    page,
     publicationPlace,
     translation,
     file,
     url
   })
   await Data.findByIdAndUpdate(req.params.dataId, { $push: { record: record._id }}, { new: true })
-  res.status(201).json({ record })
+  res.status(201).json(record)
 }
 
 // R
@@ -25,16 +26,17 @@ exports.seeAllRecords = async (req, res) => {
 
 exports.seeRecordDetails = async (req, res) => {
   const record = await Record.findById(req.params.recordId)
-  res.status(200).json({ record })
+  res.status(200).json(record)
 }
 
 // U
 exports.updateRecord = async (req, res) => {
-  const { name, newspaper, publicationDate, publicationPlace, translation, file, url } = req.body
+  const { name, newspaper, publicationDate, page, publicationPlace, translation, file, url } = req.body
   await Record.findByIdAndUpdate(req.params.recordId, {
     name,
     newspaper,
     publicationDate,
+    page,
     publicationPlace,
     translation,
     file,
@@ -45,6 +47,7 @@ exports.updateRecord = async (req, res) => {
 
 // D
 exports.deleteRecord = async (req, res) => {
-  await Record.findByIdAndDelete(req.params.recordId)
+  const record = await Record.findByIdAndDelete(req.params.recordId)
+  await Data.findByIdAndUpdate(req.body.dataId, { $pull: { record: record._id}})
   res.status(200).json('Record deleted successfully')
 }

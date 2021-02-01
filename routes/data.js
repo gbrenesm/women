@@ -18,6 +18,6 @@ router.get('/:dataId', seeDataDetail)
 router.put('/update/:dataId', updateData)
 
 // D
-router.delete('/delete/:dataId', deleteData)
+router.delete('/:dataId', deleteData)
 
 module.exports = router;
