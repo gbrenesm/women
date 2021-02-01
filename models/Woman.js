@@ -4,7 +4,11 @@ const womanSchema = new Schema(
   {
     name: String,
     age: Number,
-    note: String
+    note: String,
+    data: {
+      type: Schema.Types.ObjectId,
+      ref: 'Data'
+    }
   }
 )
 

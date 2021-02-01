@@ -6,14 +6,15 @@ const dataSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: 'Woman',
       required: true},
-    index: [{
+    record: [{
       type: Schema.Types.ObjectId,
-      ref: 'Index',
+      ref: 'Record',
       required: true
     }],
     eventsDay: String,
     place: String,
     who: String,
+    what: String,
     why: String,
     note: String
   }
