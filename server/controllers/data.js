@@ -20,13 +20,15 @@ exports.addData = async (req, res) => {
 // R
 exports.seeAllData = async (req, res) => {
   const datas = await Data.find()
-  res.status(200).json({ datas })
+    .populate('woman')
+    .populate('record')
+  res.status(200).json(datas)
 }
 
 exports.seeDataDetail = async (req, res) => {
   const data = await Data.findById(req.params.dataId)
-    .populate('Woman')
-    .populate('Record')
+    .populate('woman')
+    .populate('record')
   res.status(200).json(data)
 }
 

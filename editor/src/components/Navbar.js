@@ -1,12 +1,13 @@
-const Navbar = () => {
+const Navbar = ({ setForm }) => {
+  
   return (
     <div>
       <ul>
-        <li>Mujeres</li>
-        <li>Sobre el proyecto</li>
+        <li onClick={() => setForm(true)}>Agregar mujer</li>
+        <li onClick={() => setForm(false)}>Ver lista de todas las mujeres</li>
       </ul>
     </div>
   )
 }
 
-export default Navbar
+export default Navbar;

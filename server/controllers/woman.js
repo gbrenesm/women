@@ -16,7 +16,7 @@ exports.addWoman = async (req, res) => {
 // R
 exports.seeAllWomen = async (req, res) => {
   const women = await Woman.find()
-  res.status(200).json({ women })
+  res.status(200).json(women)
 }
 
 exports.seeWomanDetails = async (req, res) => {

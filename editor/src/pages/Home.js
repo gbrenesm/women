@@ -1,23 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // Import components
 import Navbar from '../components/Navbar';
-import Card from '../components/Card';
+import AllWomanList from '../components/AllWomanList';
+import AddWomanForm from '../components/AddWomanForm';
 
 const Home = () => {
-  const [events, setEvents] = useState(null)
-
-  useEffect(() => {
-    const fectchEvents = async () => {
-      
-    }
-
-    fectchEvents()
-  }, [])
+const [form, setForm] = useState(false)
 
   return (
     <>
-    <Navbar/>
+    <Navbar setForm={setForm} />
+    {form? <AddWomanForm setForm={setForm}/> : <AllWomanList/>}
     </>
   )
 }

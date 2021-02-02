@@ -1,8 +1,9 @@
-const Cards = () => {
- 
+const Cards = ({event}) => {
+
   return (
     <div>
-      Hola
+      <h2>{event.name}</h2>
+      <p></p>
     </div>
   )
 }

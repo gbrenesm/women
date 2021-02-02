@@ -18,8 +18,8 @@ export const seeWomanDetails = async womanId => {
   return data
 }
 
-export const updateWoman = async womanId => {
-  await service.put(`/update/${womanId}`)
+export const updateWoman = async (womanData, womanId) => {
+  await service.put(`/update/${womanId}`, womanData)
   return true
 }
 
