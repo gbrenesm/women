@@ -9,10 +9,14 @@ const Home = () => {
 const [form, setForm] = useState(false)
 
   return (
-    <>
-    <Navbar setForm={setForm} />
-    {form? <AddWomanForm setForm={setForm}/> : <AllWomanList/>}
-    </>
+    <div id="page">
+      <Navbar setForm={setForm} />
+      <div>
+        {form? 
+        <AddWomanForm setForm={setForm}/> :  <AllWomanList/>
+        }
+      </div>
+    </div>
   )
 }
 

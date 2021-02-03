@@ -7,12 +7,12 @@ const Cards = ({ woman }) => {
   const [completeInfo, setCompleteInfo] = useState(false)
 
   return (
-    <div>
-      <h2 onClick={() => setCompleteInfo(!completeInfo)}>{woman.name}</h2>
+    <div className='card' >
+      <h3 onClick={() => setCompleteInfo(!completeInfo)}>{woman.name}</h3>
       {completeInfo && 
       <>
-        <p>Agregar suceso</p>
-        <AddFactForm womanId={woman._id}/>
+        {woman.data? <p>Hey</p> : <AddFactForm womanId={woman._id}/>}
+        
       </>}
     </div>
   )

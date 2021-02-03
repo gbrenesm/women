@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Yusei+Magic&display=swap");
+nav {
+  width: 20%;
+  min-height: 100vh;
+  background-color: #255C99;
+  color: white;
+  font-family: "Yusei Magic", sans-serif;
+  line-height: 40px;
+  padding-left: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card {
+  width: 60vw;
+  border: 5px solid #618B4A;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body {
+  margin: 0;
+  font-family: "Mukta", sans-serif;
+}
+
+#page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#page div {
+  width: 80%;
+  margin: 20px auto;
+}
+/*# sourceMappingURL=styles.css.map */

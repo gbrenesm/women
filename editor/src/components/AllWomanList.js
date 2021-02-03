@@ -22,6 +22,7 @@ const AllWomanList = () => {
 
   return (
     <>
+      <h2>Listado de mujeres</h2>
       {women?.map(woman => (
         <Card key={woman._id} woman={woman} />
       ))}

@@ -16,11 +16,13 @@ exports.addWoman = async (req, res) => {
 // R
 exports.seeAllWomen = async (req, res) => {
   const women = await Woman.find()
+    .populate('data')
   res.status(200).json(women)
 }
 
 exports.seeWomanDetails = async (req, res) => {
   const woman = await Woman.findById(req.params.womanId)
+    .populate('data')
   res.status(200).json(woman)
 }
 

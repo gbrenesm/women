@@ -1,0 +1,14 @@
+nav {
+  width: 20%;
+  min-height: 100vh;
+  background-color: $lapisLazuli;
+  color: white;
+  font-family: $headersFonts;
+  line-height: 40px;
+  padding-left: 20px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}

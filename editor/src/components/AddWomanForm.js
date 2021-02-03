@@ -23,6 +23,8 @@ const AddWomanForm = ({ setForm }) => {
   }
   
   return (
+    <>
+      <h2>Agrega a una mujer</h2>
       <form onSubmit={submitForm}>
         <label htmlFor="name" >Nombre:</label>
         <input type="text" name="name" id="name" placeholder="" {...nameInput} />
@@ -34,6 +36,7 @@ const AddWomanForm = ({ setForm }) => {
         <input type="date" name="death" id="death" placeholder="" {...dateOfDeath} />
         <button type="submit">Agregar</button>
       </form>
+    </>
   )
 }
 
