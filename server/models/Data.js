@@ -15,7 +15,7 @@ const dataSchema = new Schema(
     place: String,
     who: String,
     what: String,
-    why: String,
+    description: String,
     note: String
   },
   {

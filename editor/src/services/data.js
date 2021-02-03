@@ -3,7 +3,7 @@ import axios from 'axios';
 const baseURL =  process.env.NODE_ENV === `production`? `/api/data` : "http://localhost:3000/api/data"
 const service = axios.create({ baseURL, withCredentials: true});
 
-export const addData = async (data, womanId) => {
+export const addData = async (womanId, data) => {
   await service.post(`/add/${womanId}`, data)
   return true
 }
@@ -18,7 +18,7 @@ export const seeDataDetail = async dataId => {
   return data
 }
 
-export const updateData = async (data, dataId) => {
+export const updateData = async (dataId, data) => {
   await service.put(`/update/${dataId}`, data)
   return true
 }

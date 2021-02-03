@@ -2,14 +2,14 @@
 import useInput from '../hooks/useInput';
 
 // Import services
-import { addWoman } from '../services/woman'
+import { addWoman } from '../services/woman';
 
 
 const AddWomanForm = ({ setForm }) => {
-  const nameInput = useInput('')
-  const birthDay = useInput('')
+  const nameInput   = useInput('')
+  const birthDay    = useInput('')
   const dateOfDeath = useInput('')
-  const age = useInput('')
+  const age         = useInput('')
 
   const submitForm = async e => {
     e.preventDefault()
@@ -23,7 +23,6 @@ const AddWomanForm = ({ setForm }) => {
   }
   
   return (
-    <div>
       <form onSubmit={submitForm}>
         <label htmlFor="name" >Nombre:</label>
         <input type="text" name="name" id="name" placeholder="" {...nameInput} />
@@ -35,7 +34,6 @@ const AddWomanForm = ({ setForm }) => {
         <input type="date" name="death" id="death" placeholder="" {...dateOfDeath} />
         <button type="submit">Agregar</button>
       </form>
-    </div>
   )
 }
 

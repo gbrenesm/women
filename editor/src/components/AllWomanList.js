@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react';
 import { seeAllWomen } from '../services/woman';
 
 // Import components
-import Card from '../components/Card';
+import Card from './Card';
 
 const AllWomanList = () => {
   const [women, setWomen] = useState(null)
+ 
 
   useEffect(() => {
     const fectchWomen = async () => {
@@ -21,8 +22,8 @@ const AllWomanList = () => {
 
   return (
     <>
-      {women?.map(event => (
-        <Card key={event._id} event={event} />
+      {women?.map(woman => (
+        <Card key={woman._id} woman={woman} />
       ))}
     </>
   )

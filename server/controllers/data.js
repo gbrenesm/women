@@ -3,14 +3,14 @@ const Woman = require('../models/Woman');
 
 // C
 exports.addData = async (req, res) => {
-  const { eventsDay, place, who, what, why, note } = req.body
+  const { eventsDay, place, who, what, description, note } = req.body
   const data = await Data.create({
     woman: req.params.womanId,
     eventsDay,
     place,
     who,
     what,
-    why,
+    description,
     note
   })
   await Woman.findByIdAndUpdate(req.params.womanId, { data: data._id })
@@ -34,13 +34,13 @@ exports.seeDataDetail = async (req, res) => {
 
 // U
 exports.updateData = async (req, res) => {
-  const { eventsDay, place, who, what, why, note } = req.body
+  const { eventsDay, place, who, what, description, note } = req.body
   await Data.findByIdAndUpdate(req.params.dataId, {
     eventsDay,
     place,
     who,
     what,
-    why,
+    description,
     note }, { new: true }
     )
   res.status(200).json('Data updated successfully')

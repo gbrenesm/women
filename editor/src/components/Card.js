@@ -1,9 +1,19 @@
-const Cards = ({event}) => {
+import { useState } from 'react';
+
+// Import components
+import AddFactForm from './AddFactForm'
+
+const Cards = ({ woman }) => {
+  const [completeInfo, setCompleteInfo] = useState(false)
 
   return (
     <div>
-      <h2>{event.name}</h2>
-      <p></p>
+      <h2 onClick={() => setCompleteInfo(!completeInfo)}>{woman.name}</h2>
+      {completeInfo && 
+      <>
+        <p>Agregar suceso</p>
+        <AddFactForm womanId={woman._id}/>
+      </>}
     </div>
   )
 }
