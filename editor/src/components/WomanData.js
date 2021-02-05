@@ -6,12 +6,16 @@ const WomanData = data => {
 
   return (
     <>
-      <p>Fecha del suceso: {day} de {month} de {year}</p>
-      <p>¿Qué le sucedió?: {data.data.what}</p>
-      <p>{data.data.description}</p>
-      <p>{data.data.note}</p>
-      <p>{data.data.place}</p>
-      <p>{data.data.who}</p>
+      <div>
+        <p><b>Fecha del suceso:</b> {day} de {month} de {year}</p>
+        <p><b>Lugar:</b> {data.data.place}</p>
+      </div>
+      <div>
+        <p><b>¿Qué le sucedió?:</b> {data.data.what}</p>
+        <p><b>Responsable: </b>{data.data.who}</p>
+      </div>
+      <p><b>Breve descripción:</b> {data.data.description}</p>
+      {data.data.note && <p><b>Notas adicionales: </b>{data.data.note}</p>}
     </>
   )
 }

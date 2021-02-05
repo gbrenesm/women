@@ -4,7 +4,7 @@ import useInput from '../hooks/useInput';
 // Impor services
 import { addData } from '../services/data'
 
-const AddFactForm = ({ womanId }) => {
+const AddFactForm = ({ womanId, setChanges }) => {
   const eventsDayInput      = useInput('')
   const placeInput          = useInput('')
   const whoInput            = useInput('')
@@ -22,6 +22,7 @@ const AddFactForm = ({ womanId }) => {
       description: descriptionInput.value,
       note: noteInput.value
     })
+    setChanges(true)
   }
 
   return (

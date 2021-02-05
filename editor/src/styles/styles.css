@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Yusei+Magic&display=swap");
 nav {
-  width: 250px;
+  width: 300px;
   min-height: 100vh;
-  background-color: #255C99;
+  background-color: #5FB0B7;
   color: white;
   font-family: "Yusei Magic", sans-serif;
   line-height: 40px;
@@ -14,11 +14,41 @@ nav ul {
   padding: 0;
 }
 
+.card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .card {
-  width: 60vw;
-  border: 5px solid #564787;
+  width: 500px;
+  border: 5px solid #5FB0B7;
   border-radius: 15px;
   padding: 10px;
+  margin-bottom: 30px;
+}
+
+.card h3 {
+  font: 26px "Yusei Magic", sans-serif;
+  margin-top: 10px;
+}
+
+.card div {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.card div p {
+  margin-right: 30px;
 }
 
 form {
@@ -40,10 +70,5 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-#page div {
-  width: 80%;
-  margin: 20px auto;
 }
 /*# sourceMappingURL=styles.css.map */
