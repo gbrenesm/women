@@ -13,8 +13,7 @@ const AllWomanList = () => {
   useEffect(() => {
     const fectchWomen = async () => {
       const dataWomen = await seeAllWomen()
-      console.log(dataWomen)
-      setWomen(dataWomen)
+      setWomen(dataWomen.reverse())
     }
 
     fectchWomen()
