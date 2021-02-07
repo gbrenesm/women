@@ -1,15 +1,17 @@
 // Import all scss files
 @import './variables';
 @import './navbar';
-@import './card';
-@import './form';
 
 // Global styles
 body {
   margin: 0;
   font-family: $mainFont;
+  background-color: $gray;
 }
 
 #page {
   display: flex;
+  > div {
+    padding: 50px;
+  }
 }

@@ -2,8 +2,6 @@ const months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
 
 
-
-
 export const convertMonth = date => {
   
   const year = date.slice(0, 4)
