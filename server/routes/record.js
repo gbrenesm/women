@@ -8,7 +8,7 @@ const { addRecord,
         deleteRecord } = require('../controllers/record');
 
 // C
-router.post('/add/:dataId', addRecord)
+router.post('/add/:womanId', addRecord)
 
 // R
 router.get('/', seeAllRecords)

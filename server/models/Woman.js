@@ -7,14 +7,19 @@ const womanSchema = new Schema(
     dateOfDeath: Date,
     age: Number,
     note: String,
-    data: {
-      type: Schema.Types.ObjectId,
-      ref: 'Data'
-    },
-    personalRecords: [{
+    persoalRecord: {
       type: Schema.Types.ObjectId,
       ref: 'Personal'
-    }]
+    },
+    record: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Record',
+    }],
+    eventsDay: Date,
+    place: String,
+    who: String,
+    what: String,
+    description: String,
   },
   {
     versionKey: false

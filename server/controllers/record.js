@@ -1,5 +1,5 @@
 const Record = require('../models/Record');
-const Data = require('../models/Data')
+const Woman = require('../models/Woman')
 
 // C
 exports.addRecord = async (req, res) => {
@@ -14,7 +14,7 @@ exports.addRecord = async (req, res) => {
     file,
     url
   })
-  await Data.findByIdAndUpdate(req.params.dataId, { $push: { record: record._id }}, { new: true })
+  await Woman.findByIdAndUpdate(req.params.womanId, { $push: { record: record._id }}, { new: true })
   res.status(201).json(record)
 }
 
@@ -48,6 +48,6 @@ exports.updateRecord = async (req, res) => {
 // D
 exports.deleteRecord = async (req, res) => {
   const record = await Record.findByIdAndDelete(req.params.recordId)
-  await Data.findByIdAndUpdate(req.body.dataId, { $pull: { record: record._id}})
+  await Woman.findByIdAndUpdate(req.body.dataId, { $pull: { record: record._id}})
   res.status(200).json('Record deleted successfully')
 }

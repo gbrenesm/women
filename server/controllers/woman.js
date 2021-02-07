@@ -2,13 +2,19 @@ const Woman = require('../models/Woman');
 
 // C
 exports.addWoman = async (req, res) => {
-  const { name, age, birthDay, dateOfDeath, note } = req.body
+  const { name, age, birthDay, dateOfDeath, note,
+          eventsDay, place, who, what, description } = req.body
   const woman = await Woman.create({
     name,
     age,
     birthDay,
     dateOfDeath,
-    note
+    note,
+    eventsDay,
+    place,
+    who,
+    what,
+    description
   })
   res.status(201).json(woman)
 }
@@ -16,25 +22,29 @@ exports.addWoman = async (req, res) => {
 // R
 exports.seeAllWomen = async (req, res) => {
   const women = await Woman.find()
-    .populate('data')
   res.status(200).json(women)
 }
 
 exports.seeWomanDetails = async (req, res) => {
   const woman = await Woman.findById(req.params.womanId)
-    .populate('data')
   res.status(200).json(woman)
 }
 
 // U
 exports.updateWoman = async (req, res) => {
-  const { name, age, birthDay, dateOfDeath, note } = req.body
+  const { name, age, birthDay, dateOfDeath, note,
+          eventsDay, place, who, what, description } = req.body
   await Woman.findByIdAndUpdate(req.params.womanId, {
     name,
     age,
     birthDay,
     dateOfDeath,
-    note }, { new: true })
+    note,
+    eventsDay,
+    place,
+    who,
+    what,
+    description }, { new: true })
   res.status(200).json('Woman record updated successfully')
 }
 

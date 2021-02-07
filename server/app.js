@@ -24,11 +24,9 @@ app.use(cors({
 }))
 
 const womanRouter  = require('./routes/woman');
-const dataRouter   = require('./routes/data');
 const recordRouter = require('./routes/record');
 
 app.use('/api/woman', womanRouter);
-app.use('/api/data', dataRouter);
 app.use('/api/record', recordRouter);
 app.use('/users', usersRouter);
 

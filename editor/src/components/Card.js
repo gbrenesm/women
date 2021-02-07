@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 
 // Import components
 import WomanData from './WomanData'
@@ -7,7 +8,7 @@ const Cards = ({ woman, setChanges }) => {
 
   return (
     <div className='card' >
-      <h3>{woman.name}</h3>
+      <h3><Link to={`/detail/${woman.data._id}`}>{woman.name}</Link></h3>
       {woman.data? <WomanData data={ woman.data } /> : <AddFactForm womanId={woman._id} setChanges={setChanges}/>}
     </div>
   )
