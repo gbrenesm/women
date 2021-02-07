@@ -1,5 +1,5 @@
 nav {
-  width: 200px;
+  min-width: 200px;
   min-height: 100vh;
   font-family: $headersFonts;
   line-height: 40px;
@@ -8,10 +8,14 @@ nav {
 
   h1 {
     text-align: center;
+    color: $orange;
+    margin-bottom: 5px;
   }
 
   hr {
     margin: 10px 20px;
+    color: $orange;
+    border: 1px solid $orange;
   }
 
   ul {
@@ -21,5 +25,6 @@ nav {
 
   span {
     margin-right: 10px;
+    color: $orange;
   }
 }

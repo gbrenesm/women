@@ -22,14 +22,14 @@ const AllWomanList = () => {
   }, [changes])
 
   return (
-    <>
-      <h2>Listado de mujeres</h2>
-      <div className="card-content">
+    <div className="card-content">
+      <h1>Listado de mujeres</h1>
+      <div>
         {women?.map(woman => (
           <Card key={woman._id} woman={woman} setChanges={setChanges}/>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

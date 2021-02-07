@@ -1,6 +1,8 @@
 // Import all scss files
 @import './variables';
+@import './mixig';
 @import './navbar';
+@import './card';
 
 // Global styles
 body {
@@ -9,9 +11,9 @@ body {
   background-color: $gray;
 }
 
-#page {
+#root {
   display: flex;
   > div {
-    padding: 50px;
+    padding: 30px;
   }
 }

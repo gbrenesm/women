@@ -13,14 +13,14 @@ const [form, setForm] = useState(false)
 const [allWoman, setAllWoman] = useState(true)
 
   return (
-    <div id="page">
+    <>
       <Navbar setForm={setForm} setAllWoman={setAllWoman} />
       <div>
         {form? 
         <AddWomanForm setForm={setForm}/> :  <AllWomanList allWoman={allWoman} setAllWoman={setAllWoman}/>
         }
       </div>
-    </div>
+    </>
   )
 }
 

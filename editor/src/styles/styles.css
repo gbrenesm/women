@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Yusei+Magic&display=swap");
 nav {
-  width: 200px;
+  min-width: 200px;
   min-height: 100vh;
   font-family: "Yusei Magic", sans-serif;
   line-height: 40px;
@@ -10,10 +10,14 @@ nav {
 
 nav h1 {
   text-align: center;
+  color: #FFA200;
+  margin-bottom: 5px;
 }
 
 nav hr {
   margin: 10px 20px;
+  color: #FFA200;
+  border: 1px solid #FFA200;
 }
 
 nav ul {
@@ -23,6 +27,90 @@ nav ul {
 
 nav span {
   margin-right: 10px;
+  color: #FFA200;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.card-content h1 {
+  margin: 0;
+  font-size: 45px;
+  color: #FFA200;
+}
+
+.card-content > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card {
+  width: 35vw;
+  position: relative;
+  margin: 30px 20px;
+}
+
+.card > div:nth-child(1) {
+  background-color: #255C99;
+  border-radius: 10px;
+  padding: 5px 20px;
+  width: 85%;
+  position: absolute;
+  right: 20px;
+  top: -25px;
+}
+
+.card > div:nth-child(1) h3 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.card > div:nth-child(1) a {
+  text-decoration: none;
+  margin: 0 0 50px;
+  color: white;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.card > div:nth-child(1) a:hover {
+  text-shadow: 1px 1px 0 #7997b9, 2px 2px 0 #698bb0, 3px 3px 0 #587ea8;
+  -webkit-transform: translate(-4px, -4px);
+          transform: translate(-4px, -4px);
+}
+
+.card hr {
+  color: #255C99;
+  border: 2px solid #255C99;
+  width: 80%;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.card > div:nth-child(2) {
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px 20px;
+  padding-top: 30px;
+  -webkit-box-shadow: 12px 12px 16px gray;
+          box-shadow: 12px 12px 16px gray;
+}
+
+.card > div:nth-child(2) h2 {
+  color: #255C99;
+  margin: 25px 0;
+}
+
+.card > div:nth-child(2) > div:nth-child(3) div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 body {
@@ -31,13 +119,13 @@ body {
   background-color: #E9ECEF;
 }
 
-#page {
+#root {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#page > div {
-  padding: 50px;
+#root > div {
+  padding: 30px;
 }
 /*# sourceMappingURL=styles.css.map */
