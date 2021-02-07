@@ -15,6 +15,7 @@ const AllWomanList = () => {
       const dataWomen = await seeAllWomen()
       setWomen(dataWomen.reverse())
       setChanges(false)
+      console.log(dataWomen)
     }
 
     fectchWomen()

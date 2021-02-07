@@ -1,19 +1,8 @@
-import { useState, useEffect } from 'react'
-
-// Import services
-import { seeDataDetail } from '../services/data';
+import { useState } from 'react'
 
 const Detail = ({ match: { params: { dataid }}}) => {
   const [fact, setFact] = useState(null)
 
-  useEffect(() => {
-    const fetchData = async dataId => {
-      const data = await seeDataDetail(dataId)
-      setFact(data)
-    }
-    
-    fetchData(dataid)
-  }, [])
 
   return (
     <div>
