@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL =  process.env.NODE_ENV === `production`? `/api/woman` : "http://localhost:3000/api/woman"
+const baseURL =  `${process.env.REACT_APP_SERVER_ENDOPOINT}/api/woman`
 const service = axios.create({ baseURL, withCredentials: true})
 
 export const addWoman = async womanData => {

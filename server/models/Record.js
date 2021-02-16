@@ -11,9 +11,9 @@ const recordSchema = new Schema(
     publicationDate: {
       type: Date,
       required: true},
-    page: Number,
+    page: String,
     publicationPlace: String,
-    translation: String,
+    transcription: String,
     file: String,
     url: String
   },
