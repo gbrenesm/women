@@ -12,10 +12,16 @@ const Navbar = ({ setForm, setAllWoman }) => {
     <nav>
       <h1>Editor</h1>
       <hr/>
-      <ul>
-        <li onClick={() => setForm(true)}><span><FontAwesomeIcon icon={faUserPlus}/></span>Agregar mujer</li>
-        <li onClick={setWoman}><span><FontAwesomeIcon icon={faIdCard}/></span>Ver lista completa</li>
-      </ul>
+      <div>
+        <div onClick={() => setForm(true)}>
+          <FontAwesomeIcon icon={faUserPlus} size='2x' className="icon"/>
+          <p>Agrega mujer</p>
+        </div>
+        <div onClick={setWoman}>
+          <FontAwesomeIcon icon={faIdCard} size='2x' className="icon"/>
+          <p>Ver lista</p>
+        </div>
+      </div>
     </nav>
   )
 }

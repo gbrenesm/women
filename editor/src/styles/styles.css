@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Yusei+Magic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 nav {
-  min-width: 200px;
+  min-width: 150px;
   min-height: 100vh;
-  font-family: "Yusei Magic", sans-serif;
+  font-family: "Roboto Mono", monospace;
   line-height: 40px;
-  background-color: white;
-  padding-left: 20px;
+  background-color: #373E40;
 }
 
 nav h1 {
@@ -20,14 +19,21 @@ nav hr {
   border: 1px solid #FFA200;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+nav div div {
+  margin: 25px;
+  cursor: pointer;
 }
 
-nav span {
-  margin-right: 10px;
+nav .icon {
   color: #FFA200;
+  margin: 0 30px;
+}
+
+nav p {
+  font-size: 12px;
+  color: #FFA200;
+  margin: 0;
+  text-align: center;
 }
 
 .card-content {
@@ -36,8 +42,10 @@ nav span {
 
 .card-content h1 {
   margin: 0;
-  font-size: 45px;
+  font-size: 30px;
   color: #FFA200;
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 30px;
 }
 
 .card-content > div {
@@ -113,9 +121,50 @@ nav span {
       justify-content: space-around;
 }
 
+main {
+  margin: 50px 20px 20px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 6px 10px #b1aeae;
+          box-shadow: 0px 0px 6px 10px #b1aeae;
+  border-radius: 15px;
+  padding: 35px 25px 25px;
+  position: relative;
+  max-width: 50%;
+}
+
+main h1 {
+  background-color: #255C99;
+  color: white;
+  border-radius: 15px;
+  padding: 15px;
+  position: absolute;
+  width: calc(100% - 90px);
+  top: -60px;
+}
+
+main h2 {
+  color: #FFA200;
+}
+
+.topbar {
+  background-color: #373E40;
+  border-left: 1px solid #bdbdbde0;
+  color: #FFA200;
+  height: 75px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.topbar h2 {
+  font-family: "Roboto Mono", monospace;
+  padding: 20px 50px;
+  margin: 0;
+}
+
 body {
   margin: 0;
-  font-family: "Mukta", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #E9ECEF;
 }
 
@@ -123,9 +172,5 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-#root > div {
-  padding: 30px;
 }
 /*# sourceMappingURL=styles.css.map */

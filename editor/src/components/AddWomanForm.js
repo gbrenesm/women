@@ -36,7 +36,6 @@ const AddWomanForm = ({ setForm }) => {
   
   return (
     <>
-      <h2>Agrega a una mujer</h2>
       <form onSubmit={submitForm}>
         <label htmlFor="name" >Nombre:</label>
         <input type="text" name="name" id="name" placeholder="" {...nameInput} />

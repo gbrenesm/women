@@ -3,6 +3,8 @@
 @import './mixig';
 @import './navbar';
 @import './card';
+@import './details';
+@import './topbar';
 
 // Global styles
 body {
@@ -13,7 +15,4 @@ body {
 
 #root {
   display: flex;
-  > div {
-    padding: 30px;
-  }
 }

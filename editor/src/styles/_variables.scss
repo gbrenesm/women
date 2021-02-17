@@ -1,12 +1,13 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Yusei+Magic&display=swap');
-$mainFont: 'Mukta', sans-serif;
-$headersFonts: 'Yusei Magic', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+$mainFont: 'Montserrat', sans-serif;
+$headersFonts: 'Roboto Mono', monospace;
 
 // Colors
 $lapisLazuli: #255C99;
-$green: #618B4A;
 $orange: #FFA200;
-$verdigris: #5FB0B7;
 $gray: #E9ECEF;
 $bg: #4F7197;
+$grayDark: #373E40;
+$steelBlue: #488286;
+$grayDarkLight: #bdbdbde0;

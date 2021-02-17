@@ -1,10 +1,9 @@
 nav {
-  min-width: 200px;
+  min-width: 150px;
   min-height: 100vh;
   font-family: $headersFonts;
   line-height: 40px;
-  background-color: white;
-  padding-left: 20px;
+  background-color: $grayDark;
 
   h1 {
     text-align: center;
@@ -17,14 +16,21 @@ nav {
     color: $orange;
     border: 1px solid $orange;
   }
-
-  ul {
-    list-style: none;
-    padding: 0;
+  
+  div div{
+    margin: 25px;
+    cursor: pointer;
   }
 
-  span {
-    margin-right: 10px;
+  .icon {
     color: $orange;
+    margin: 0 30px;
+  }
+
+  p {
+    font-size: 12px;
+    color: $orange;
+    margin: 0;
+    text-align: center;
   }
 }

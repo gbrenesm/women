@@ -1,0 +1,15 @@
+.topbar{
+  background-color: $grayDark;
+  border-left: 1px solid $grayDarkLight;
+  color: $orange;
+  height: 75px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  
+  h2 {
+    font-family: $headersFonts;
+    padding: 20px 50px;
+    margin: 0;
+  }
+}

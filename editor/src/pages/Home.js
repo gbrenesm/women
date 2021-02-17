@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 // Import components
 import Navbar from '../components/Navbar';
+import TopBar from '../components/TopBar';
 import AllWomanList from '../components/AllWomanList';
 import AddWomanForm from '../components/AddWomanForm';
 
@@ -16,6 +17,7 @@ const [allWoman, setAllWoman] = useState(true)
     <>
       <Navbar setForm={setForm} setAllWoman={setAllWoman} />
       <div>
+        <TopBar title={form? 'Agregar mujer' : 'Lista de mujeres'}/>
         {form? 
         <AddWomanForm setForm={setForm}/> :  <AllWomanList allWoman={allWoman} setAllWoman={setAllWoman}/>
         }
