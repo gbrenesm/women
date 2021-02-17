@@ -1,0 +1,35 @@
+.form {
+  input, select {
+    font-family: $mainFont;
+    margin: 0 10px 20px;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+  }
+
+  .long{
+    width: 300px;
+  }
+}
+
+.woman-form {
+  width: 95%;
+  margin: 0 auto;
+  padding: 120px 0 0 150px;
+
+  h3 {
+    width: calc(100% - 20px);
+    margin: 30px 0;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: white;
+    color: $lapisLazuli;
+  }
+
+  form > div > div {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+  }
+}

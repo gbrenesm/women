@@ -18,7 +18,7 @@ const [allWoman, setAllWoman] = useState(true)
       <Navbar setForm={setForm} setAllWoman={setAllWoman} />
       <div>
         <TopBar title={form? 'Agregar mujer' : 'Lista de mujeres'}/>
-        {form? 
+        {form?
         <AddWomanForm setForm={setForm}/> :  <AllWomanList allWoman={allWoman} setAllWoman={setAllWoman}/>
         }
       </div>

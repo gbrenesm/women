@@ -36,6 +36,22 @@ nav p {
   text-align: center;
 }
 
+.topbar {
+  background-color: #373E40;
+  border-left: 1px solid #bdbdbde0;
+  color: #FFA200;
+  height: 75px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.topbar h2 {
+  font-family: "Roboto Mono", monospace;
+  padding: 20px 50px;
+  margin: 0;
+}
+
 .card-content {
   width: 100%;
 }
@@ -146,20 +162,42 @@ main h2 {
   color: #FFA200;
 }
 
-.topbar {
-  background-color: #373E40;
-  border-left: 1px solid #bdbdbde0;
-  color: #FFA200;
-  height: 75px;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
+.form input, .form select {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 10px 20px;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
 }
 
-.topbar h2 {
-  font-family: "Roboto Mono", monospace;
-  padding: 20px 50px;
-  margin: 0;
+.form .long {
+  width: 300px;
+}
+
+.woman-form {
+  width: 95%;
+  margin: 0 auto;
+  padding: 120px 0 0 150px;
+}
+
+.woman-form h3 {
+  width: calc(100% - 20px);
+  margin: 30px 0;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: white;
+  color: #255C99;
+}
+
+.woman-form form > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
 }
 
 body {
