@@ -162,22 +162,41 @@ main h2 {
   color: #FFA200;
 }
 
-.form input, .form select {
-  font-family: "Montserrat", sans-serif;
-  margin: 0 10px 20px;
+.form input, .form select, .form textarea {
+  font: 13px "Montserrat", sans-serif;
+  padding: 10px;
+  margin: 0 50px 20px 10px;
   padding: 10px;
   border-radius: 3px;
   border: none;
+}
+
+.form textarea {
+  width: 50%;
 }
 
 .form .long {
   width: 300px;
 }
 
+.form button {
+  background-color: #255C99;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font: 14px "Montserrat", sans-serif;
+  margin: 20px auto;
+}
+
+.form button:disabled {
+  background-color: #4F7197;
+  color: #E9ECEF;
+}
+
 .woman-form {
-  width: 95%;
+  width: 80%;
   margin: 0 auto;
-  padding: 120px 0 0 150px;
+  padding: 120px 0 0;
 }
 
 .woman-form h3 {
@@ -193,11 +212,15 @@ main h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 85%;
   margin: 0 auto;
+}
+
+.woman-form .who {
+  width: 500px;
 }
 
 body {
@@ -210,5 +233,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.page {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */

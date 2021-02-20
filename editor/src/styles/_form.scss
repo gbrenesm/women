@@ -1,21 +1,41 @@
 .form {
-  input, select {
-    font-family: $mainFont;
-    margin: 0 10px 20px;
+  input, select, textarea {
+    font: 13px $mainFont;
+    padding: 10px;
+    margin: 0 50px 20px 10px;
     padding: 10px;
     border-radius: 3px;
     border: none;
   }
 
+  textarea{
+    width: 50%;
+    
+  }
   .long{
     width: 300px;
   }
+
+  button{
+    background-color: $lapisLazuli;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font: 14px $mainFont;
+    margin: 20px auto;
+  }
+
+  button:disabled{
+    background-color: $bg;
+    color: $gray;
+  }
+
 }
 
 .woman-form {
-  width: 95%;
+  width: 80%;
   margin: 0 auto;
-  padding: 120px 0 0 150px;
+  padding: 120px 0 0;
 
   h3 {
     width: calc(100% - 20px);
@@ -28,8 +48,12 @@
 
   form > div > div {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 85%;
     margin: 0 auto;
+  }
+
+  .who{
+    width: 500px;
   }
 }

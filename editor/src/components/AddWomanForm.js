@@ -14,9 +14,10 @@ const AddWomanForm = ({ setForm }) => {
   const placeInput       = useInput('')
   const whoInput         = useInput('')
   const whatInput        = useInput('')
+  const whatDecptnInput  = useInput('')
   const descriptionInput = useInput('')
   const noteInput        = useInput('')
-
+  
   const submitForm = async e => {
     e.preventDefault()
     await addWoman({
@@ -27,7 +28,7 @@ const AddWomanForm = ({ setForm }) => {
       eventsDay: eventsDayInput.value,
       place: placeInput.value,
       who: whoInput.value,
-      what: whatInput.value,
+      what: whatInput.value === 'otra'? whatDecptnInput.value : whatInput.value,
       description: descriptionInput.value,
       note: noteInput.value
     })
@@ -72,24 +73,27 @@ const AddWomanForm = ({ setForm }) => {
               <label htmlFor="place" >Lugar:</label>
               <input type="text" name="place" id="place" placeholder="Ciudad o estado" className="long" {...placeInput} />
             </div>
+          </div>
+          <div>
             <div>
               <label htmlFor="who">¿Quién?:</label>
-              <input type="text" name="who" id="who" placeholder="Nombre o relación" className="long" {...whoInput} />
+              <input type="text" name="who" id="who" placeholder="Nombre o relación" className="who" {...whoInput} />
             </div>
           </div>
           <div>
             <div>
-              <label htmlFor="what" >¿Qué ocurrió?:</label>
-              <select id="what">
+              <label htmlFor="what">¿Qué ocurrió?:</label>
+              <select id="what" required {...whatInput}>
+                <option value='' defaultValue>Selecciona una opción</option>
                 <option value="feminicidio">Feminicidio</option>
                 <option value="intento">Inento de feminicidio</option>
-                <option value="violación">violación</option>
-                <option value="otra">otra</option>
+                <option value="violación">Violación</option>
+                <option value="otra">Otra</option>
               </select>
             </div>
             <div>
               <label htmlFor="other">¿Otra?:</label>
-              <input type="text" name="other" id="other" placeholder="¿Qué ocurrió?" {...whatInput} />
+              <input type="text" name="other" id="other" placeholder="¿Qué ocurrió?" className="long" {...whatDecptnInput} />
             </div>
             
           </div>
@@ -100,7 +104,7 @@ const AddWomanForm = ({ setForm }) => {
             <textarea  name="note" id="note" placeholder="¿Alguna nota?" {...noteInput} />
           </div>
         </div>
-        <button type="submit">Agregar</button>
+        <button type="submit" disabled={!nameInput.value}>Agregar</button>
       </form>
     </div>
   )
