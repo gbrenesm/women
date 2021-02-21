@@ -1,23 +1,22 @@
 main {
-  margin: 50px 20px 20px  ;
-  background-color: white;
-  box-shadow: 0px 0px 6px 10px rgb(177, 174, 174);
-  border-radius: 15px;
-  padding: 35px 25px 25px;
-  position: relative;
-  max-width: 50%;
-
-  h1 {
-    background-color: $lapisLazuli;
-    color: white;
-    border-radius: 15px;
-    padding: 15px;
-    position: absolute;
-    width: calc(100% - 90px);
-    top: -60px;
-  }
+  max-width: 80%;
+  margin: auto;
 
   h2 {
+    color: $orange;
+    background-color: white;
+    border-radius: 2px;
+    padding: 10px;
+  }
+
+  div{
+    margin: auto;
+    width:92%;
+  }
+
+  .what{
+    text-transform: capitalize;
+    font: 30px $headersFonts;
     color: $orange;
   }
 }

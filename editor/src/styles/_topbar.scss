@@ -1,15 +1,23 @@
 .topbar{
-  background-color: $grayDark;
-  border-left: 1px solid $grayDarkLight;
-  color: $orange;
-  height: 75px;
+  font-family: $headersFonts;
   position: fixed;
   width: 100%;
+  height: 75px;
+  border-left: 1px solid $grayDarkLight;
+  background-color: $grayDark;
+  color: $orange;
   z-index: 10;
-  
+  display: flex;
+
   h2 {
-    font-family: $headersFonts;
-    padding: 20px 50px;
-    margin: 0;
+    margin: auto 50px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  p {
+    margin: auto 20px;
+    font-size: 20px;
+    cursor: pointer;
   }
 }

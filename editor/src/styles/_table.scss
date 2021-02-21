@@ -1,0 +1,50 @@
+.table-content{
+  padding-top: 120px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 75%;
+  margin: auto;
+  
+  th {
+    font: 20px $headersFonts;
+    color: $orange;
+    background-color: $grayDark;
+  }
+
+  tr th:nth-child(2){
+    text-align: left;
+  }
+  
+  th, td {
+    border-bottom: 1px solid $grayDark;
+    padding: 10px;
+  }
+  
+  td {
+    font-size: 16px;
+  }
+
+  tr:hover {
+    background-color: white;
+    }
+  
+  // For the name column
+  a {
+    color: $orange;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .3s ease;
+    &:hover {
+    text-shadow: 1px 1px 0 lighten($orangeLight, 15%), 2px 2px 0 lighten($orangeLight, 10%), 3px 3px 0 lighten($orangeLight, 5%);
+    transform: translate(-4px,-4px);
+    }
+  }
+
+  // For the date and the place column
+  tr td:nth-child(3), tr td:nth-child(4){
+    text-align: center;
+  }
+
+}
