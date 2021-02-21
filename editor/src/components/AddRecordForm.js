@@ -47,23 +47,23 @@ const AddRecordForm = ({ setNewNote, womanId, setForm }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form record-form">
       <label htmlFor="name" >Título de la nota</label>
-      <input type="text" name="name" id="name"  placeholder="" {...nameInput} />
+      <input type="text" name="name" id="name"  placeholder="Título" {...nameInput} />
       <label htmlFor="newspaper" >Periódico</label>
-      <input type="text" name="newspaper" id="newspaper"  placeholder="" {...newspaperInput}/>
+      <input type="text" name="newspaper" id="newspaper"  placeholder="Nombre de la publicación" {...newspaperInput}/>
       <label htmlFor="publicationDate" >Fecha de publicación</label>
-      <input type="date" name="publicationDate" id="publicationDate" placeholder=""  {...publicationDateInput} />
+      <input type="date" name="publicationDate" id="publicationDate" {...publicationDateInput} />
       <label htmlFor="page" >Página(s)</label>
-      <input type="text" name="page" id="page" {...pageInput}/>
+      <input type="text" name="page" id="page" placeholder="2, 5 y 7" {...pageInput}/>
       <label htmlFor="publicationPlace" >Lugar de publicación</label>
-      <input type="text" name="publicationPlace" id="publicationPlace" placeholder=""  {...publicationPlaceInput} />
+      <input type="text" name="publicationPlace" id="publicationPlace" placeholder="Ciudad o país"  {...publicationPlaceInput} />
       <label htmlFor="transcription" >Transcripción</label>
-      <textarea name="transcription" id="transcription" placeholder=""  {...transcriptionInput} />
+      <textarea name="transcription" id="transcription" placeholder="Transcripción"  {...transcriptionInput} />
       <label htmlFor="file" >Imagen de la nota</label>
-      <input type="file" name="file" id="file" placeholder="" onChange={uploadFile}/>
+      <input type="file" name="file" id="file" onChange={uploadFile}/>
       <label htmlFor="url" >URL de la nota</label>
-      <input type="text" name="url" id="url" {...urlInput}/>
+      <input type="text" name="url" id="url" placeholder="https://..." {...urlInput}/>
       <button type="submit">Crear registro</button>
     </form>
   )

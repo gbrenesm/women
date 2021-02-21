@@ -113,12 +113,19 @@ table tr td:nth-child(3), table tr td:nth-child(4) {
   text-align: center;
 }
 
+.details-page > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 main {
   max-width: 80%;
-  margin: auto;
+  margin: 100px auto 0;
 }
 
 main h2 {
+  font: 20px "Roboto Mono", monospace;
   color: #FFA200;
   background-color: white;
   border-radius: 2px;
@@ -130,10 +137,28 @@ main div {
   width: 92%;
 }
 
-main .what {
+main div:nth-child(1) {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #FFA200;
+}
+
+main div:nth-child(1) p:nth-child(1) {
   text-transform: capitalize;
   font: 30px "Roboto Mono", monospace;
-  color: #FFA200;
+}
+
+main div:nth-child(1) p:nth-child(2) {
+  cursor: pointer;
+  margin: 0;
 }
 
 .form input, .form select, .form textarea {

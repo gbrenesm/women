@@ -49,11 +49,11 @@ export const convertMonth = date => {
       month = 'El mes no es válido'
       break;
   }
+  
+  const completeDay = `${day} de ${month} de ${year}`
 
   return {
-    day,
-    month,
-    year
+    completeDay
   }
 }
 

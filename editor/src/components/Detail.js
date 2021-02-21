@@ -1,49 +1,40 @@
 
 import { convertMonth } from '../services/convertMonth'
 
-const Detail = ({ woman }) => {
+const Detail = ({ woman, setForm, form }) => {
 
-  let deathDay
-  let deathMonth
-  let deathYear
-  let birthDay
-  let monthDay
-  let yearDay
-  let eventsDay
-  let eventsMonth
-  let eventsYear
-
+  let deathDate
+  let birthDate
+  let eventsDate
+  
   if (woman.dateOfDeath){
-    const { day, month, year } = convertMonth(woman.dateOfDeath)
-    deathDay = day
-    deathMonth = month
-    deathYear = year
+    const { completeDay } = convertMonth(woman.dateOfDeath)
+    deathDate = completeDay
   }
 
   if (woman.birthDay){
-    const { day, month, year } = convertMonth(woman.birthDay)
-    birthDay = day
-    monthDay = month
-    yearDay = year
+    const { completeDay } = convertMonth(woman.birthDay)
+    birthDate = completeDay
   }
 
   if (woman.eventsDay){
-    const { day, month, year } = convertMonth(woman.eventsDay)
-    eventsDay = day
-    eventsMonth = month
-    eventsYear = year
+    const { completeDay } = convertMonth(woman.eventsDay)
+    eventsDate = completeDay
   }
   return (
     <main>
-      <p className='what'><b>{woman.what}</b></p>
+      <div>
+        <p className='what'><b>{woman.what}</b></p>
+        <p onClick={() => setForm(!form)}>Añade una nota</p>
+      </div>
       <h2>Datos personales</h2>
       <div>
-        <p><b>Fecha de nacimiento:</b> {woman.birthDay? `${birthDay} de ${monthDay} de ${yearDay}` : 'No hay datos'}</p>
-        <p><b>Fecha de defunción:</b> {woman.dateOfDeath? `${deathDay} de ${deathMonth} de ${deathYear}` : 'No hay datos'}</p>
+        <p><b>Fecha de nacimiento:</b> {woman.birthDay? birthDate : 'No hay datos'}</p>
+        <p><b>Fecha de defunción:</b> {woman.dateOfDeath? deathDate : 'No hay datos'}</p>
         </div>
       <h2>Datos del suceso</h2>
       <div>
-        <p><b>Fecha:</b> {woman.eventsDay? `${eventsDay} de ${eventsMonth} de ${eventsYear}` : 'No hay datos'}</p>
+        <p><b>Fecha:</b> {woman.eventsDay? eventsDate : 'No hay datos'}</p>
         <p><b>Lugar:</b> {woman.place}</p>
         <p><b>Edad:</b> {woman.age? woman.age : 'No hay datos'}</p>
         <p><b>Responsable:</b> {woman.who}</p>

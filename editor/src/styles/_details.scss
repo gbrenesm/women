@@ -1,22 +1,42 @@
+.details-page{
+  >div{
+    display: flex;
+  }
+}
+
 main {
   max-width: 80%;
-  margin: auto;
+  margin: 100px auto 0;
 
   h2 {
+    font: 20px $headersFonts;
     color: $orange;
     background-color: white;
     border-radius: 2px;
     padding: 10px;
   }
 
-  div{
+  div {
     margin: auto;
     width:92%;
   }
 
-  .what{
+// For the headr (what and add note)
+  div:nth-child(1){
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $orange;
+
+  p:nth-child(1){
     text-transform: capitalize;
     font: 30px $headersFonts;
-    color: $orange;
+    }
+  
+  p:nth-child(2){
+    cursor: pointer;
+    margin: 0;
+  }
   }
 }
