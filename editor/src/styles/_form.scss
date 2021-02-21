@@ -2,34 +2,26 @@
   input, select, textarea {
     font: 13px $mainFont;
     padding: 10px;
-    margin: 0 50px 20px 10px;
-    padding: 10px;
     border-radius: 3px;
     border: none;
   }
 
-  textarea{
-    width: 50%;
-    
-  }
-  .long{
-    width: 300px;
+  h3 {
+    background-color: white;
+    font-family: $headersFonts;
+    color: $orange;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 3px;
   }
 
-  button{
-    background-color: $lapisLazuli;
-    border: none;
+  button {
+    font: 14px $mainFont;
     color: white;
     padding: 10px 20px;
-    font: 14px $mainFont;
-    margin: 20px auto;
+    border: none;
+    border-radius: 2px;
   }
-
-  button:disabled{
-    background-color: $bg;
-    color: $gray;
-  }
-
 }
 
 .woman-form {
@@ -37,15 +29,9 @@
   margin: 0 auto;
   padding: 120px 0 0;
 
-  h3 {
-    width: calc(100% - 20px);
-    margin: 30px 0;
-    padding: 10px;
-    border-radius: 3px;
-    background-color: white;
-    color: $lapisLazuli;
+  input, select, textarea {
+    margin: 0 50px 20px 10px;
   }
-
   form > div > div {
     display: flex;
     justify-content: flex-start;
@@ -53,7 +39,85 @@
     margin: 0 auto;
   }
 
+  .long {
+    width: 300px;
+  }
+
+  textarea{
+    width: 50%;
+    
+  }
+
   .who{
     width: 500px;
+  }
+
+  button{
+    background-color: $lapisLazuli;
+    margin: 20px auto;
+  }
+
+  button:disabled{
+    background-color: $bg;
+    color: $gray;
+  }
+}
+
+
+/////////////////////////////
+.record-form {
+  width: 100%;
+  margin-left: 30px;
+
+  h3 {
+    margin: 0 0 20px;
+  }
+  form {
+    div {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    // For the date and pages
+    div:nth-child(3){
+      display: flex;
+      
+      div:nth-child(2){
+        width: 50%;
+
+        input{
+          width: 40%;
+        }
+      }
+
+      input {
+        margin-left: 10px;
+      }
+    }
+
+    div:nth-child(4){
+      input {
+        margin-left: 10px;
+        width: 60%;
+      }
+    }
+
+    input, textarea {
+      margin: 10px 0;
+    }
+
+    textarea, .long {
+      width: 95%;
+    }
+  }
+
+  .button {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+
+    button {
+      background-color: $orange;
+    }
   }
 }

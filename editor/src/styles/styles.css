@@ -113,15 +113,17 @@ table tr td:nth-child(3), table tr td:nth-child(4) {
   text-align: center;
 }
 
-.details-page > div {
+.details-page > div:nth-child(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 100px auto 0;
+  padding: 0 50px;
 }
 
 main {
   max-width: 80%;
-  margin: 100px auto 0;
+  margin: 0 auto;
 }
 
 main h2 {
@@ -164,32 +166,25 @@ main div:nth-child(1) p:nth-child(2) {
 .form input, .form select, .form textarea {
   font: 13px "Montserrat", sans-serif;
   padding: 10px;
-  margin: 0 50px 20px 10px;
-  padding: 10px;
   border-radius: 3px;
   border: none;
 }
 
-.form textarea {
-  width: 50%;
-}
-
-.form .long {
-  width: 300px;
+.form h3 {
+  background-color: white;
+  font-family: "Roboto Mono", monospace;
+  color: #FFA200;
+  width: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 3px;
 }
 
 .form button {
-  background-color: #255C99;
-  border: none;
+  font: 14px "Montserrat", sans-serif;
   color: white;
   padding: 10px 20px;
-  font: 14px "Montserrat", sans-serif;
-  margin: 20px auto;
-}
-
-.form button:disabled {
-  background-color: #4F7197;
-  color: #E9ECEF;
+  border: none;
+  border-radius: 2px;
 }
 
 .woman-form {
@@ -198,13 +193,8 @@ main div:nth-child(1) p:nth-child(2) {
   padding: 120px 0 0;
 }
 
-.woman-form h3 {
-  width: calc(100% - 20px);
-  margin: 30px 0;
-  padding: 10px;
-  border-radius: 3px;
-  background-color: white;
-  color: #255C99;
+.woman-form input, .woman-form select, .woman-form textarea {
+  margin: 0 50px 20px 10px;
 }
 
 .woman-form form > div > div {
@@ -218,8 +208,84 @@ main div:nth-child(1) p:nth-child(2) {
   margin: 0 auto;
 }
 
+.woman-form .long {
+  width: 300px;
+}
+
+.woman-form textarea {
+  width: 50%;
+}
+
 .woman-form .who {
   width: 500px;
+}
+
+.woman-form button {
+  background-color: #255C99;
+  margin: 20px auto;
+}
+
+.woman-form button:disabled {
+  background-color: #4F7197;
+  color: #E9ECEF;
+}
+
+.record-form {
+  width: 100%;
+  margin-left: 30px;
+}
+
+.record-form h3 {
+  margin: 0 0 20px;
+}
+
+.record-form form div {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.record-form form div:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.record-form form div:nth-child(3) div:nth-child(2) {
+  width: 50%;
+}
+
+.record-form form div:nth-child(3) div:nth-child(2) input {
+  width: 40%;
+}
+
+.record-form form div:nth-child(3) input {
+  margin-left: 10px;
+}
+
+.record-form form div:nth-child(4) input {
+  margin-left: 10px;
+  width: 60%;
+}
+
+.record-form form input, .record-form form textarea {
+  margin: 10px 0;
+}
+
+.record-form form textarea, .record-form form .long {
+  width: 95%;
+}
+
+.record-form .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 10px 0;
+}
+
+.record-form .button button {
+  background-color: #FFA200;
 }
 
 body {
