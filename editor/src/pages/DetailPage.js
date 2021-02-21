@@ -29,7 +29,7 @@ const DetailPage = ({ match: { params: { womanid }}}) => {
   return (
     <div className='page details-page'>
       <TopBar title={woman?.name} back={true}/>
-      {woman? <Detail woman={woman}/> : <p>Cargando...</p>}
+      {woman? <Detail woman={woman}/> : <div class="loader"></div>}
       <p onClick={() => setForm(!form)}>Añade una nota</p>
       {form && <AddRecordForm setNewNote={setNewNote} womanId={womanid} setForm={setForm}/>}
     </div>
