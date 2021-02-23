@@ -163,6 +163,42 @@ main div:nth-child(1) p:nth-child(2) {
   margin: 0;
 }
 
+.record {
+  margin: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.record > div {
+  width: 38%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: white;
+  padding: 15px;
+}
+
+.record > div div:nth-child(1) {
+  width: 100%;
+  height: 50%;
+}
+
+.record > div div:nth-child(1) img {
+  width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.record > div div:nth-child(2) {
+  margin-top: 20px;
+}
+
+.record > div div:nth-child(2) a {
+  font: 20px "Roboto Mono", monospace;
+  color: #FFA200;
+}
+
 .form input, .form select, .form textarea {
   font: 13px "Montserrat", sans-serif;
   padding: 10px;
@@ -232,7 +268,7 @@ main div:nth-child(1) p:nth-child(2) {
 
 .record-form {
   width: 100%;
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 .record-form h3 {
@@ -240,7 +276,7 @@ main div:nth-child(1) p:nth-child(2) {
 }
 
 .record-form form div {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 

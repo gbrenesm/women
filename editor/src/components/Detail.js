@@ -20,6 +20,7 @@ const Detail = ({ woman, setForm, form }) => {
   if (woman.eventsDay){
     const { completeDay } = convertMonth(woman.eventsDay)
     eventsDate = completeDay
+    console.log(woman)
   }
   return (
     <main>

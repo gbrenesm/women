@@ -3,14 +3,14 @@ const Woman = require('../models/Woman')
 
 // C
 exports.addRecord = async (req, res) => {
-  const { name, newspaper, publicationDate, page, publicationPlace, translation, file, url } = req.body
+  const { name, newspaper, publicationDate, page, publicationPlace, transcription, file, url } = req.body
   const record = await Record.create({
     name,
     newspaper,
     publicationDate,
     page,
     publicationPlace,
-    translation,
+    transcription,
     file,
     url
   })
@@ -31,14 +31,14 @@ exports.seeRecordDetails = async (req, res) => {
 
 // U
 exports.updateRecord = async (req, res) => {
-  const { name, newspaper, publicationDate, page, publicationPlace, translation, file, url } = req.body
+  const { name, newspaper, publicationDate, page, publicationPlace, transcription, file, url } = req.body
   await Record.findByIdAndUpdate(req.params.recordId, {
     name,
     newspaper,
     publicationDate,
     page,
     publicationPlace,
-    translation,
+    transcription,
     file,
     url
   }, { new: true })

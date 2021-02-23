@@ -27,6 +27,7 @@ exports.seeAllWomen = async (req, res) => {
 
 exports.seeWomanDetails = async (req, res) => {
   const woman = await Woman.findById(req.params.womanId)
+    .populate('record')
   res.status(200).json(woman)
 }
 

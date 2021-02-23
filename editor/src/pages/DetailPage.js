@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 
-
 // Import services
 import { seeWomanDetails } from '../services/woman'
 
@@ -8,6 +7,7 @@ import { seeWomanDetails } from '../services/woman'
 import TopBar from '../components/TopBar'
 import Detail from '../components/Detail'
 import AddRecordForm from '../components/AddRecordForm'
+import RecordCard from '../components/RecordCard'
 
 
 
@@ -37,6 +37,13 @@ const DetailPage = ({ match: { params: { womanid }}}) => {
           form={form}/> 
         : <div className="loader"></div>}
         {form && <AddRecordForm setNewNote={setNewNote} womanId={womanid} setForm={setForm}/>}
+      </div>
+      <div className="record">
+        {woman?.record.map(record => (
+          <RecordCard
+            key={record._id}
+            record={record}/>
+        ))}
       </div>
     </div>
   )
